@@ -23,7 +23,8 @@ public class BuiltInFunctionalInterfacesImpl {
    * expected.
    */
   static void checkingSuppliers() {
-    display(() -> "1. Suppliers part working");
+    Supplier<String> stringSupplier = () -> "1. Suppliers part working";
+    display(stringSupplier);
   }
 
   /**
@@ -64,7 +65,7 @@ public class BuiltInFunctionalInterfacesImpl {
     display(() -> "4. Function part is ready with value:- " + function.apply(n));
     Function<Integer, Integer> function1 = val -> val * 100;
     display(() -> "4. Function part is ready with value:- " + function1.apply(n));
-    
+
     // int m = modifyValue(n, val -> val + 10);
     // display(() -> "4. Function part is ready with value:- " + m);
     // int o = modifyValue(n, val -> val * 100);
